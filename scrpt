@@ -1,0 +1,9 @@
+alert("Урок 2 Основы JavaScript в алерте");
+var _1 = 5; // number;
+var Name = "Алексей" // string;
+
+  alert (Name);
+  
+
+document.write(Name);
+console.log("Урок 2 Основы JavaScript в консоли");
