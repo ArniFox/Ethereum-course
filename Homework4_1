@@ -1,0 +1,11 @@
+pragma solidity ^0.4.11;
+ 
+contract Lesson4_1 {
+    
+    string ReturnedNumber = "111222333";
+    
+    function getData() constant returns (string) {
+        return ReturnedNumber;
+    }
+           
+}
