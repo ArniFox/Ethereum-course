@@ -1,0 +1,12 @@
+pragma solidity ^0.4.11;
+
+contract ShowNumber{
+    
+    uint n;
+
+    function numberIs(uint _n) payable returns (uint) {
+        if (msg.value > 10 * 1 ether) {
+            return n = _n;
+        }
+    }
+}
