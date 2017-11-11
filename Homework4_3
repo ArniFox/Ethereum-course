@@ -1,0 +1,28 @@
+pragma solidity ^0.4.11;
+
+contract Level4_3final{
+    
+   string message;
+   address owner;
+     
+    function Level4_3final () {
+        owner = msg.sender;
+    }
+    
+function transferToOwner () internal{
+  owner.transfer (msg.value);
+}
+
+        function messageIs(string _message) payable{
+            require (msg.value > 2 * 1 ether);
+            message = _message;
+            transferToOwner ();
+            yourMessage ();
+                       
+        }
+
+        function yourMessage () constant returns (string) {
+          return message;
+        }
+
+      }
