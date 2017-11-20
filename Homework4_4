@@ -1,0 +1,64 @@
+pragma solidity ^0.4.11;
+
+contract L4L4_10{
+    
+   string message;
+   address owner;
+   // Инструкция для посетителя
+   string welcomeString = "Время ожидания - 3мин. Сумма взноса - 2 ethers";
+   string falseMes = "Сообщение не опубликовано. Некорректная сумма или не завершена публикация предыдущего сообщения";
+   string luckMes = "Сообщение опубликовано";
+   uint timeStart;
+   string alert;
+   
+     
+    function L4L4_10 () {
+        owner = msg.sender;
+        timeStart = 0;
+        inputData ();
+        alert = "";
+    }
+    
+function transferToOwner () internal{
+  owner.transfer (msg.value);
+  
+
+}
+
+function inputData () constant returns (string) {
+  return welcomeString;
+
+}
+
+function transferMes () constant returns (string){
+            return alert;
+
+}
+// Перечисленная сумма списывается в любом случае, и перечисляется на счёт собственника контракта;
+        function messageIs(string _message) payable returns (string)  {
+          if   (msg.value == 2 ether && now > timeStart + 3 minutes) {
+            timeStart = now;
+            message = _message;
+            transferToOwner ();
+            yourMessage ();
+            alert = luckMes;
+            transferMes();
+          }
+            
+            else  
+            transferToOwner ();
+            alert = falseMes;
+            transferMes ();
+                       
+              }
+
+        function yourMessage () constant returns (string) {
+                    return message;
+          
+          
+        }
+
+        function killContract() { if (msg.sender == owner) selfdestruct(owner); }
+
+      }
+        //Есть команда отката платежа типа трансфертоовнер в сторону мессендера?
