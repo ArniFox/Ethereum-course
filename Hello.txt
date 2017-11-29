@@ -1,1 +1,10 @@
+из первой ветки
+
 New Hello in Master
+
+из второй ветки
+
+print("Hello my dear friend");
+hello-advanced
+опять хэллоу
+>>>>>>> feature/hello-advanced
