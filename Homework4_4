@@ -60,4 +60,3 @@ function transferMes () constant returns (string){
         function killContract() { if (msg.sender == owner) selfdestruct(owner); }
 
       }
-      // This is an addittion from a browser.
