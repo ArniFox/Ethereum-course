@@ -1,1 +1,3 @@
 print("Hello my dear friend");
+hello-advanced
+опять хэллоу
